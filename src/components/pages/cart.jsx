@@ -19,16 +19,14 @@ const Cart = () => {
     const cartItems = (cartItem) => {
         return (
             <div className="wrapper" key={cartItem.id}>
-                <div className="container">
-                    <button className='close' onClick={()=>handleClose(cartItem)}>X</button>
-                    <div>
-                        <div>
-                            <img src={cartItem.image} alt="cart item" />
-                        </div>
-                        <div>
-                            <h3>{cartItem.title}</h3>
-                            <p>{ cartItem.price}</p>
-                        </div>
+                <div className="cart-wrapper">
+                    <div className='cart-card'>
+                        <img src={cartItem.image} alt="cart item" />
+                    </div>
+                    <div className='cart-card'>
+                        <h4>{cartItem.title}</h4>
+                        <h4>${cartItem.price}</h4>
+                        <button className='close' onClick={()=>handleClose(cartItem)}>Remove</button>
                     </div>
 
                 </div>
@@ -39,11 +37,7 @@ const Cart = () => {
     const emptyCart = () => {
         return (
             <div>
-                <div>
-                    <div>
-                        <h3>Your cart is empty</h3>
-                    </div>
-                </div>
+                <h3>Your cart is empty</h3>
             </div>
         )
     }
@@ -58,8 +52,7 @@ const Cart = () => {
 
     return (
         <>
-
-            <section className="cart">
+            <section className="cart-page">
                 <h1>My cart</h1>
                 {state.length === 0 && emptyCart()}
                 {state.length !== 0 && state.map(cartItems)}
