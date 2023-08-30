@@ -76,6 +76,7 @@ header .navbar li a:hover{
     .navbar li a{
         font-size: 0.9rem;
         font-weight: 400;
+        padding-bottom: 0.3rem;
     }
     header .active{
         left: 0rem;
