@@ -32,11 +32,21 @@ header .navbar li a:hover{
     transition: all 1s ease;
     opacity: 0.6;
 }
+.cart-icon{
+    list-style-type: none;
+}
+.cart-icon a{
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: #1d3344;
+    font-weight: 500;
+}
+
 .logo{
     display: flex;
     align-items: center;
     justify-content: center;
-     padding-top: 0.5rem;
+    padding-top: 0.5rem;
 }
 .logo img{
     border-radius:50%;
@@ -70,6 +80,13 @@ header .navbar li a:hover{
     header .active{
         left: 0rem;
     }
+
+    .logo img{
+        border-radius:50%;
+        height: 40px;
+        width: 40px;
+    }
+
     .hamburger{
         display: block;
     }

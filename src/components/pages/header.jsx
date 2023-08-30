@@ -30,8 +30,9 @@ const Header = () => {
                 <li><NavLink onClick={Close} to="/about">About</NavLink></li>
                 <li><NavLink onClick={Close} to="/contact">Contact</NavLink></li>
                 {/*<li><NavLink onClick={Close} to="/products">Products</NavLink></li>*/}
-                <li><NavLink onClick={Close} to="/cart" >cart({state.length})</NavLink></li>
+
             </nav>
+            <li className='cart-icon'><NavLink onClick={Close} to="/cart" id='cart'>cart({state.length})</NavLink></li>
             <div className="hamburger" onClick={Open}>
                 {click ? (<span>x</span>) : (<span>=</span>)}
             </div>

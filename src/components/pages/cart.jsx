@@ -18,7 +18,7 @@ const Cart = () => {
 
     const cartItems = (cartItem) => {
         return (
-            <div className="wrapper" key={cartItem.id}>
+            <div className="wrapper" key={cartItem.id}><hr />
                 <div className="cart-wrapper">
                     <div className='cart-card'>
                         <img src={cartItem.image} alt="cart item" />
@@ -28,7 +28,6 @@ const Cart = () => {
                         <h4>${cartItem.price}</h4>
                         <button className='close' onClick={()=>handleClose(cartItem)}>Remove</button>
                     </div>
-
                 </div>
             </div>
         )
@@ -44,7 +43,7 @@ const Cart = () => {
 
     const button = () => {
         return (
-            <div>
+            <div className='checkout-link'>
                 <NavLink to="/checkout">Proceed to checkout</NavLink>
             </div>
         )
