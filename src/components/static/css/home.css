@@ -18,9 +18,11 @@
     top: 30rem;
 }
 
-@media (max-width:480px){
+@media (max-width:550px){
     .hero{
-        height: 30vh;
+        height: 50vh;
+        background: url('../images/image2.jpg') no-repeat center center / cover;
+        background-attachment: fixed;
     }
 }
 
