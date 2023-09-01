@@ -1,11 +1,19 @@
 import '../static/css/about.css'
 import '../static/css/index.css'
 
+import React, {useState} from 'react'
+
 import { NavLink } from 'react-router-dom'
-import Products from '../pages/products'
-import React from 'react'
 
 const About = () => {
+
+
+    /*const articleStyle = ({
+        backGroundColor: "#fff",
+        color: "#1d3344",
+        borderRadius: "0.2rem",
+        border: "1px solid #1d3344"
+    })*/
     return (
         <>
             <section className="about">

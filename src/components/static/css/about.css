@@ -43,6 +43,14 @@
     background-color: #1d3344;
     color: #fff;
 }
+.section-3 article:hover{
+    background-color: #fff;
+    color: #1d3344;
+    border-radius: 0.2rem;
+    border: 1px solid #1d3344;
+    transition: all 1s;
+    transform: scaleY(1.1);
+}
 .section-3 b{
     font-size: 1.5rem;
     line-height: 2;
@@ -54,7 +62,7 @@
     transition: all 1s;
     transition: all 1s ease-out;
     padding: 0.4rem;
-    width: 130px;
+    width: 160px;
     border-radius: 0.2rem;
 }
 .about button a{
