@@ -70,20 +70,20 @@
   color: #fff;
 }
 .box #view{
-  background-color: #fff;
+  background-color: #1d3344;
+  border: 1px solid #fff;
   width:"60px";
   padding: 0.2rem 1rem;
   border-radius: 5px;
   text-decoration: none;
-  color: #1d3344;
+  color: #fff;
 }
 .box #view:hover{
+  background-color: #fff;
   transition: all 1s;
   transition: all 1s ease-in-out;
   transform: scale(1.1);
-  border: 1px solid #fff;
-  background-color: #1d3344;
-  color: #fff;
+  color: #1d3344;
 }
 
 

@@ -1,12 +1,11 @@
 import '../static/css/home.css'
 import '../static/css/index.css'
 
-import React, { useEffect, useState } from 'react'
-
+import { NavLink } from 'react-router-dom'
 import Products from './products'
-import axios from 'axios'
+import React from 'react'
 
-const Home = (search, input) => {
+const Home = () => {
 
 
     return (
@@ -17,7 +16,11 @@ const Home = (search, input) => {
                 <section className="home-section">
                     <div className="hero"></div>
                 </section>
-                <Products/>
+                <Products />
+
+                <div className="contact-button">
+                    <button><NavLink to="/contact">Contact Us</NavLink></button>
+                </div>
 
             </main>
 

@@ -64,7 +64,7 @@ const Products = () => {
                             )
                         })}
                     </div>
-                    <div className="search-wrapper">
+                    <form className="search-wrapper">
                         <input
                             type="search"
                             name="search"
@@ -72,7 +72,7 @@ const Products = () => {
                             onChange={handleChange}
                             placeholder='Search your favourite'
                         />
-                    </div>
+                    </form>
                 </div>
 
                 <div className="products">

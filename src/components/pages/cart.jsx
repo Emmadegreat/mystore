@@ -16,7 +16,7 @@ const Cart = () => {
         dispatch(delCart(item))
     }
 
-    const cartItems = (cartItem) => {
+    /*const cartItems = (cartItem) => {
         return (
             <div className="wrapper" key={cartItem.id}><hr />
                 <div className="cart-wrapper">
@@ -31,7 +31,7 @@ const Cart = () => {
                 </div>
             </div>
         )
-    }
+    }*/
 
     const emptyCart = () => {
         return (
@@ -54,7 +54,28 @@ const Cart = () => {
             <section className="cart-page">
                 <h1>My cart</h1>
                 {state.length === 0 && emptyCart()}
-                {state.length !== 0 && state.map(cartItems)}
+
+
+                {state.length !== 0 && state.map((cartItem) => {
+
+                    return (
+                        <div className="wrapper" key={cartItem.id}><hr />
+                <div className="cart-wrapper">
+                    <div className='cart-card'>
+                        <img src={cartItem.image} alt="cart item" />
+                    </div>
+                    <div className='cart-card'>
+                        <h4>{cartItem.title}</h4>
+                        <h4>${cartItem.price}</h4>
+                        <button className='close' onClick={()=>handleClose(cartItem)}>Remove</button>
+                    </div>
+                </div>
+            </div>
+                    )
+                    })
+
+
+                }
                 {state.length !== 0 && button()}
             </section>
 

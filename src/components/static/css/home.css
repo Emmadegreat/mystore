@@ -17,6 +17,34 @@
     background-color: #1d3344;
     top: 30rem;
 }
+.contact-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 4rem;
+}
+
+.contact-button button{
+    background-color: #fff;
+    color: #1d3344;
+    border: 1px solid #1d3344;
+    transition: all 1s;
+    transition: all 1s ease-out;
+    padding: 0.4rem;
+    width: 200px;
+    cursor: pointer;
+    border-radius: 0.2rem;
+}
+.contact-button button a{
+    text-decoration: none;
+    color: #1d3344;
+    font-size: 1.2rem;
+}
+
+.contact-button button:hover{
+   transform: scaleX(1.1);
+   transition: all 1s;
+}
 
 @media (max-width:550px){
     .hero{
