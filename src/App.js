@@ -30,7 +30,7 @@ function App() {
         </section>
         <Footer
           date={new Date().getFullYear()}
-          copyright="&copy; All Right Reserved. SHOP-QIK"
+          copyright="&copy; All Right Reserved. E-QIK"
           contact="+234-703-453-4697"
         />
         </Router>
