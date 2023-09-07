@@ -59,6 +59,11 @@ hr{
     text-decoration: none;
 }
 
+.continue-shopping{
+    text-align: start;
+    padding-top: 2rem;
+}
+
 @media (max-width:768px) {
     .cart-page{
         padding: 30px 30px;

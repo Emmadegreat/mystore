@@ -1,19 +1,11 @@
 import '../static/css/about.css'
 import '../static/css/index.css'
 
-import React, {useState} from 'react'
-
 import { NavLink } from 'react-router-dom'
+import React from 'react'
 
 const About = () => {
 
-
-    /*const articleStyle = ({
-        backGroundColor: "#fff",
-        color: "#1d3344",
-        borderRadius: "0.2rem",
-        border: "1px solid #1d3344"
-    })*/
     return (
         <>
             <section className="about">
@@ -26,7 +18,7 @@ const About = () => {
                 <div className="section-2">
                     <article>
                         <p>
-                            At E-Store, we're more than just an online shopping destination –
+                            At SHOP-QIK, we're more than just an online shopping destination –
                             we're a hub of fashion, technology, and elegance. Founded with a
                             passion for providing the best in male and female attire, cutting-edge
                             electronics, and exquisite jewelry, our journey began with a simple idea:
@@ -43,7 +35,7 @@ const About = () => {
                             that caters to the modern, fashion-conscious individual. Whether you're
                             seeking the latest trends in clothing, the most innovative electronics,
                             or that perfect piece of jewelry to express your unique personality,
-                            E-Store is your ultimate destination.
+                            SHOP-QIK is your ultimate destination.
                         </p>
                     </article>
                     <article>
@@ -60,7 +52,7 @@ const About = () => {
                     <article>
                         <b>Customer Oriented</b>
                         <p>
-                            Shopping at E-Store goes beyond a transaction – it's an experience.
+                            Shopping at SHOP-QIK goes beyond a transaction – it's an experience.
                             Our user-friendly interface, secure payment gateways, and reliable
                             delivery services make every step of the journey seamless and enjoyable.
                             We value our customers and strive to provide unparalleled customer service,

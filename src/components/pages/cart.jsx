@@ -3,7 +3,7 @@ import '../static/css/index.css'
 
 import { useDispatch, useSelector } from 'react-redux'
 
-import { NavLink } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import React from 'react'
 import { delCart } from '../../redux/action'
 
@@ -33,7 +33,7 @@ const Cart = () => {
         )
     }*/
 
-    const emptyCart = () => {
+    /*const emptyCart = () => {
         return (
             <div>
                 <h3>Your cart is empty</h3>
@@ -47,36 +47,46 @@ const Cart = () => {
                 <NavLink to="/checkout">Proceed to checkout</NavLink>
             </div>
         )
-    }
+    }*/
 
     return (
         <>
             <section className="cart-page">
                 <h1>My cart</h1>
-                {state.length === 0 && emptyCart()}
+                {state.length === 0 &&
+                    <div>
+                        <h3>Your cart is empty</h3>
+                    </div>
+                }
 
 
                 {state.length !== 0 && state.map((cartItem) => {
 
                     return (
                         <div className="wrapper" key={cartItem.id}><hr />
-                <div className="cart-wrapper">
-                    <div className='cart-card'>
-                        <img src={cartItem.image} alt="cart item" />
-                    </div>
-                    <div className='cart-card'>
-                        <h4>{cartItem.title}</h4>
-                        <h4>${cartItem.price}</h4>
-                        <button className='close' onClick={()=>handleClose(cartItem)}>Remove</button>
-                    </div>
-                </div>
-            </div>
+                            <div className="cart-wrapper">
+                                <div className='cart-card'>
+                                    <img src={cartItem.image} alt="cart item" />
+                                </div>
+                                <div className='cart-card'>
+                                    <h4>{cartItem.title}</h4>
+                                    <h4>${cartItem.price}</h4>
+                                    <button className='close' onClick={()=>handleClose(cartItem)}>Remove</button>
+                                </div>
+                            </div>
+                        </div>
                     )
-                    })
+                })}
 
+                {state.length !== 0 && (
+                    <div className='checkout-link'>
+                        <Link to="/checkout">Proceed to checkout</Link><br />
+                    </div>
+                )}
 
-                }
-                {state.length !== 0 && button()}
+                <div className='continue-shopping'>
+                    <Link to="/">⬅️Continue Shopping</Link>
+                </div>
             </section>
 
         </>

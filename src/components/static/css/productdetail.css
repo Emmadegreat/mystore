@@ -43,7 +43,8 @@
     color: #1d3344;
     background-color: #fff;
     width: 160px;
-    height: 36px;
+    height: 35px;
+    padding: 0.4rem;
     font-size: 1rem;
     border: 1px solid #1d3344;
     border-radius: 0.2rem;
@@ -55,6 +56,13 @@
     transition: all 1s ease-out;
     border: 1px solid #1d3344;
 }
+.continue-shopping{
+    text-align: center;
+}
+.continue-shopping a{
+    font-size: medium;
+    color: #1d3344;
+}
 
 @media (max-width:768px){
     .product-detail{
@@ -63,19 +71,24 @@
     }
     .product-detail>div{
         padding-top: 2rem;
+        padding-left: 0rem;
     }
-    .button-wrapper{
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    .button-wrapper .go-to-cart{
-        margin: 1rem 0rem 0rem 0rem;
-    }
+
 }
 
 @media (max-width:550px){
     .product-detail{
         flex-direction: column;
-        padding: 30px 25px;
+        padding: 30px 20px;
+    }
+    .button-wrapper{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .go-to-cart, .button-wrapper button{
+        max-width: 115px;
+        font-size: 0.7rem;
+        padding: 0.1rem;
     }
 }

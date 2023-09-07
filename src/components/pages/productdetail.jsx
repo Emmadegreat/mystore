@@ -1,7 +1,7 @@
 import '../static/css/productdetail.css'
 import '../static/css/index.css'
 
-import { NavLink, useParams } from 'react-router-dom'
+import { Link, NavLink, useParams } from 'react-router-dom'
 import React, {useEffect, useState} from 'react'
 import { addCart, delCart } from '../../redux/action/index';
 
@@ -58,7 +58,7 @@ const ProductDetail = () => {
                         <h4>{product.title}</h4>
                         <h5>{product.category}</h5>
                         <b>${product.price}</b>
-                        <b>{ product.rating && product.rating.rate}</b>
+                        <b>Rating: { product.rating && product.rating.rate}</b>
                         <p>{product.description}</p> <br />
 
                         <div className='button-wrapper'>
@@ -68,7 +68,11 @@ const ProductDetail = () => {
                     </div>
                 </section>
 
+
             ) : (<p>" Loading..."</p>)}
+            <div className='continue-shopping'>
+                <Link to="/">⬅️Continue Shopping</Link>
+            </div>
 
         </>
     )
