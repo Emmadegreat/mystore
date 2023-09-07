@@ -8,9 +8,9 @@ import emailjs from '@emailjs/browser';
 
 const Contact = () => {
 
-    const [name, setName] = useState();
-    const [email, setEmail] = useState();
-    const [message, setMessage] = useState();
+    const [user_name, setUser_name] = useState("");
+    const [user_email, setUser_email] = useState("");
+    const [message, setMessage] = useState("");
 
     const form = useRef();
 
@@ -18,19 +18,21 @@ const Contact = () => {
         e.preventDefault();
 
         const sendDetails = {
-            name,
-            email,
+            user_name,
+            user_email,
             message
         }
+
+        const Log =()=>console.log(user_email+user_name+message);
 
 
 
         emailjs.sendForm(
-            //form.current,
-            sendDetails,
             'service_hpwftru',//service-id
             'template_0ko02r8',//template id
+            form.current,
             'uqeNFiEeopkQJod9d'//public-key
+            //sendDetails,
         )
         .then((result) => {
             console.log(result.text);
@@ -61,20 +63,20 @@ const Contact = () => {
                         type="text"
                         name="user_name"
                         required
-                        onChange={(e)=>setName(e.target.value)}
+
                     />
                     <label for="email">Email</label>
                     <input
                         type="email"
                         name="user_email"
                         required
-                        onChange={(e)=>setEmail(e.target.value)}
+
                     />
                     <label for="message">Message</label>
                     <textarea
                         name="message"
                         required
-                        onChange={(e)=>setMessage(e.target.value)}
+
                     />
                     <button type="submit">Send</button>
                 </form>
