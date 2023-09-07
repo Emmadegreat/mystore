@@ -7,6 +7,7 @@ const Email = () => {
     const [user_name, setUser_name] = useState("");
     const [user_email, setUser_email] = useState("");
     const [message, setMessage] = useState("");
+    const [successMessage, setSuccessMessage] = useState("");
 
     const form = useRef();
 
@@ -27,8 +28,11 @@ const Email = () => {
         )
         .then((response) => {
             if (response) {
-               alert(`Hello ${user_name}, your mail has been submitted successfully`)
-             console.log('success', response);
+                setSuccessMessage(`Hello ${user_name}, your mail has been submitted successfully`);
+                setTimeout(() => {
+                    setSuccessMessage(successMessage);
+                    window.location.href = "/";
+                }, 2000);
            }
             setUser_name('');
             setUser_email('');
@@ -44,6 +48,7 @@ const Email = () => {
         <>
             <section>
                 <h1>Send us a mail</h1><br />
+                {successMessage && <p style={{color:"#e82129"}}>{ successMessage}</p>}
                 <form ref={form} onSubmit={sendEmail}>
                     <label htmlFor="name">Name</label>
                     <input
