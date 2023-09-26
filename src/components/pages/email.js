@@ -40,7 +40,8 @@ const Email = () => {
         })
             .catch((error) => {
             alert("error")
-            console.log(error, 'error');
+                console.log(error, 'error');
+                setSuccessMessage(`Hello ${user_name}, there was an error while sending your mail try again!.`)
         });
     };
 
@@ -83,3 +84,9 @@ const Email = () => {
 }
 
 export default Email
+
+
+
+
+
+
