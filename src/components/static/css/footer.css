@@ -3,26 +3,31 @@ footer{
   flex-direction: column;
   width: 100%;
   color: #d5d1d1;
-}
-.footer .first-section{
-  background-color: #fff;
-  height: 14rem;
-  padding: 3rem 6rem;
-}
-.footer .second-section{
+  padding: 2rem 50px;
   background-color: #000;
-  padding: 2rem 4rem;
+}
+
+footer .footer-wrapper{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  color: #8f8c8c;
 }
+
+@media screen and (max-width:768px){
+  footer{
+    padding: 1rem 30px;
+  }
+
+  .footer-wrapper #card1{
+    order: 2;
+  }
+}
+
 @media screen and (max-width:560px){
-    .footer .second-section{
-        padding: 1rem;
-        flex-direction: column;
-    }
-    .footer .second-section p{
-        padding-bottom: 0.7rem;
-    }
+  footer .footer-wrapper{
+    flex-direction: column;
+  }
+  footer .footer-wrapper p{
+    padding-bottom: 0.7rem;
+  }
 }

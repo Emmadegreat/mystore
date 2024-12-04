@@ -29,7 +29,6 @@ const Header = () => {
                 </NavLink></li>
                 <li><NavLink onClick={Close} to="/about">About</NavLink></li>
                 <li><NavLink onClick={Close} to="/contact">Contact</NavLink></li>
-                {/*<li><NavLink onClick={Close} to="/products">Products</NavLink></li>*/}
 
             </nav>
             <li className='cart-icon'><NavLink onClick={Close} to="/cart" id='cart'>cart({state.length})</NavLink></li>

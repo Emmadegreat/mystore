@@ -1,3 +1,5 @@
+'use client'
+
 import '../static/css/products.css'
 import '../static/css/index.css'
 
@@ -9,6 +11,8 @@ import axios from 'axios'
 const Products = () => {
 
     const [products, setProducts] = useState([]);
+    const [product, setProduct] = useState([]);
+
     const [search, setSearch] = useState("");
 
     const [selectCategory, setSelectCategory] = useState("all");
@@ -21,11 +25,27 @@ const Products = () => {
             }
             const res = await axios.get(url);
             setProducts(res.data)
+            //console.log(res.data);
 
         } catch (error) {
             console.log(error.message);
         }
     }
+
+    useEffect(() => {
+        //setIsloading(true);
+        axios.get('/api/product')
+            .then(response => {
+                console.log('API response:', response);
+                setProduct(response.data.products);
+                //setIsloading(false);
+            })
+            .catch(error => {
+                console.error('Error fetching products:', error);
+               // setIsloading(false);
+            });
+    }, [])
+
 
     useEffect(() => {
         Fetch(selectCategory)
@@ -76,9 +96,11 @@ const Products = () => {
                 </div>
 
                 <div className="products">
+
                     {filtered.map((product) => {
                         return (
                             <div className='products-container' key={product.id}>
+
                                 <div className='img-wrapper'>
                                     <img src={product.image} alt="prouct" />
                                 </div>
