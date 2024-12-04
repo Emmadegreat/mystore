@@ -24,7 +24,7 @@ const Header = () => {
                 <li><NavLink
                     onClick={Close} to="/"
                     className={({ isActive }) => isActive ? "navbar.active" : ""}
-                    end style={({ isActive }) => ({ borderBottom: isActive ? "2px solid#e82129" : "#1d3344" })}>
+                    end style={({ isActive }) => ({ borderBottom: isActive ? "2px solid #e82129" : "#1d3344" })}>
                     Home
                 </NavLink></li>
                 <li><NavLink onClick={Close} to="/about">About</NavLink></li>
