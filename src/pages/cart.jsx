@@ -5,7 +5,10 @@ import { useDispatch, useSelector } from 'react-redux'
 
 import { Link } from 'react-router-dom'
 import React from 'react'
-import { delCart } from '../../redux/action'
+import { delCart } from '../redux/action/index';
+
+//import { delCart } from '../../redux/action'
+
 
 const Cart = () => {
 

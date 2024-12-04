@@ -3,7 +3,7 @@ import '../static/css/index.css'
 
 import { Link, NavLink, useParams } from 'react-router-dom'
 import React, {useEffect, useState} from 'react'
-import { addCart, delCart } from '../../redux/action/index';
+import { addCart, delCart } from '../redux/action/index';
 
 import axios from 'axios';
 import { useDispatch } from 'react-redux';

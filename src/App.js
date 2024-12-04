@@ -1,13 +1,13 @@
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 
-import About from "./components/pages/about";
-import Cart from "./components/pages/cart";
-import Checkout from "./components/pages/checkout";
-import Contact from "./components/pages/contact";
-import Footer from "./components/pages/footer";
-import Header from "./components/pages/header";
-import Home from './components/pages/home';
-import ProductDetail from "./components/pages/productdetail";
+import About from "./pages/about";
+import Cart from "./pages/cart";
+import Checkout from "./pages/checkout";
+import Contact from "./pages/contact";
+import Footer from "./components/footer";
+import Header from "./components/header";
+import Home from './pages/home';
+import ProductDetail from "./pages/productdetail";
 
 function App() {
   return (

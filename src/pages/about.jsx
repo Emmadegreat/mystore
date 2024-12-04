@@ -1,4 +1,4 @@
-import '../static/css/about.css'
+import '../static/css/about.css';
 import '../static/css/index.css'
 
 import { NavLink } from 'react-router-dom'

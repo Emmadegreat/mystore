@@ -1,7 +1,7 @@
 import '../static/css/index.css'
 import '../static/css/contact.css'
 
-import Email from './email';
+import Email from '../components/email'
 import React from 'react'
 
 const Contact = () => {
